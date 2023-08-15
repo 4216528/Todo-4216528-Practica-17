@@ -25,12 +25,14 @@ namespace Todo_4216528.Models
 
         [PrimaryKey, AutoIncrement]
 
-        // Se declaran los items que se crearan y se les asigna su respectivo { get; set;  //}
+        // Se declaran las diferentes variables que se crearan y se les asigna su respectivo { get; set;  //}
         public int ID { get; set; }
-        public string Name { get; set; }
-        public string Notes { get; set; }
-        public bool Done { get; set; }
 
+        public string Name { get; set; }
+
+        public string Notes { get; set; }
+
+        public bool Done { get; set; }
 
     }
 

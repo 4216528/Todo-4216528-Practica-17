@@ -1,4 +1,6 @@
-﻿using Microsoft.Extensions.Logging;
+﻿using Todo_4216528.Views;
+using Todo_4216528.Data;
+using Microsoft.Extensions.Logging;
 
 namespace Todo_4216528
 {
@@ -18,6 +20,12 @@ namespace Todo_4216528
 #if DEBUG
 		builder.Logging.AddDebug();
 #endif
+
+            builder.Services.AddSingleton<TodoListPage>();
+
+            builder.Services.AddSingleton<TodoItemPage>();
+
+            builder.Services.AddSingleton<TodoItemDatabase>();
 
             return builder.Build();
         }

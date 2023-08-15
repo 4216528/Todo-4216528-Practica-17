@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8" ?>
+    
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             
+             x:Class="Todo_4216528.Views.TodoItemPage"
+             
+             Title="{Binding Name}"
+             
+             xmlns:models="clr-namespace:Todo_4216528.Models"
+             
+             x:DataType="models:TodoItem">
+
+
+    <!-- Se crea un ScrollView para habilitar la opcion de scroll en la app -->
+    
+    <ScrollView>
+
+        <!-- Se crea un VerticalStackLayout y se definene sus propiedades de Padding, Spacing y se declara su orinetación al principio -->
+        
+        <VerticalStackLayout Padding="20" Spacing="10" VerticalOptions="StartAndExpand">
+            
+            <Label Text="Nombre" />
+            
+            <Entry Text="{Binding Name}" />
+            
+            <Label Text="Nota" />
+            
+            <Entry Text="{Binding Notes}" />
+            
+            <Label Text="Listo" />
+            
+            <Switch IsToggled="{Binding Done}" />
+            
+            <Button Text="Guardar" Clicked="OnSaveClicked" />
+            
+            <Button Text="Eliminar" Clicked="OnDeleteClicked" />
+            
+            <Button Text="Cancelar" Clicked="OnCancelClicked" />
+            
+        </VerticalStackLayout>
+        
+    </ScrollView>
+    
+</ContentPage>
